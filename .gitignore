@@ -2,3 +2,5 @@
 .DS_Store
 api/
 cover.out
+.vscode
+*__pycache__
