@@ -4,6 +4,7 @@ from solutions import add_two_numbers
 from solutions import longest_substr_wo_repeating as lswr
 from solutions import longest_palindromic_substr as lps
 from solutions import reverse_int32 as ri32
+from solutions import string_to_int as sti
 
 
 class TestMediumTasks(unittest.TestCase):
@@ -65,6 +66,23 @@ class TestMediumTasks(unittest.TestCase):
                 want,
                 "unexpected reversed int"
             )
+
+    def test_string_to_int(self):
+        tests = {
+            'words and 987': 0,
+            '': 0,
+            '   -42': -42,
+            '42': 42,
+            '-+12': 0,
+            '-2147483648': -2147483648,
+            '2147483648': 2147483647,
+            '    -2147483649': -2147483648,
+            '   01234': 1234,
+        }
+
+        for val, want in tests.items():
+            self.assertEqual(sti.Solution().myAtoi(val),
+                             want, 'unexpected int')
 
 
 if __name__ == '__main__':
