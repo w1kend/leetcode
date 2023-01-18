@@ -5,6 +5,7 @@ from solutions import longest_substr_wo_repeating as lswr
 from solutions import longest_palindromic_substr as lps
 from solutions import reverse_int32 as ri32
 from solutions import string_to_int as sti
+from solutions import browser_history
 
 
 class TestMediumTasks(unittest.TestCase):
@@ -83,6 +84,21 @@ class TestMediumTasks(unittest.TestCase):
         for val, want in tests.items():
             self.assertEqual(sti.Solution().myAtoi(val),
                              want, 'unexpected int')
+
+    def test_browser_history(self):
+        bh = browser_history.BrowserHistory("leetcode.com")
+        bh.visit('google.com')
+        bh.visit('facebook.com')
+        bh.visit('youtube.com')
+
+        self.assertEqual(bh.back(1), 'facebook.com', '')
+        self.assertEqual(bh.back(1), 'google.com', '')
+        self.assertEqual(bh.forward(1), 'facebook.com', '')
+
+        bh.visit('linkedin.com')
+        self.assertEqual(bh.forward(2), 'linkedin.com', '')
+        self.assertEqual(bh.back(2), 'google.com', '')
+        self.assertEqual(bh.back(7), 'leetcode.com', '')
 
 
 if __name__ == '__main__':
