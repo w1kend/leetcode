@@ -6,6 +6,7 @@ from solutions import longest_palindromic_substr as lps
 from solutions import reverse_int32 as ri32
 from solutions import string_to_int as sti
 from solutions import browser_history
+from solutions import roman_to_int
 
 
 class TestMediumTasks(unittest.TestCase):
@@ -99,6 +100,20 @@ class TestMediumTasks(unittest.TestCase):
         self.assertEqual(bh.forward(2), 'linkedin.com', '')
         self.assertEqual(bh.back(2), 'google.com', '')
         self.assertEqual(bh.back(7), 'leetcode.com', '')
+
+    def test_from_roman_to_int(self):
+        tests = {
+            'X': 10,
+            'III': 3,
+            'IV': 4,
+            'IX': 9,
+            'LVIII': 58,
+            'XXVII': 27,
+            'MCMXCIV': 1994,
+        }
+        rti = roman_to_int.Solution()
+        for val, want in tests.items():
+            self.assertEqual(rti.romanToInt(val), want, 'unexpected int value')
 
 
 if __name__ == '__main__':
