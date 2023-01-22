@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/contains-duplicate/
-from ast import List
+from typing import List
 
 
 class Solution:
