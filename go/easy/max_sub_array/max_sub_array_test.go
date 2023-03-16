@@ -2,7 +2,7 @@ package max_sub_array
 
 import (
 	"fmt"
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -47,17 +47,17 @@ func Test_maxSubArray(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(fmt.Sprintf("divide_and_conquer__%s", tt.name), func(t *testing.T) {
 			got := maxSubArray(tt.args.nums)
-			testsupport.AssertEqual(t, got, tt.want, "wrong sum")
+			test.AssertEqual(t, got, tt.want, "wrong sum")
 		})
 
 		t.Run(fmt.Sprintf("letcoode_solution__%s", tt.name), func(t *testing.T) {
 			got := maxSubArray2(tt.args.nums)
-			testsupport.AssertEqual(t, got, tt.want, "wrong sum")
+			test.AssertEqual(t, got, tt.want, "wrong sum")
 		})
 
 		t.Run(fmt.Sprintf("kadane's_algorithm__%s", tt.name), func(t *testing.T) {
 			got := maxSubArray3(tt.args.nums)
-			testsupport.AssertEqual(t, got, tt.want, "wrong sum")
+			test.AssertEqual(t, got, tt.want, "wrong sum")
 		})
 	}
 }

@@ -1,7 +1,7 @@
 package besttimetobuysellstock
 
 import (
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -39,7 +39,7 @@ func Test_maxProfit(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := maxProfit(tt.args.prices)
-			testsupport.AssertEqual(t, got, tt.want, "compare profit")
+			test.AssertEqual(t, got, tt.want, "compare profit")
 		})
 	}
 }

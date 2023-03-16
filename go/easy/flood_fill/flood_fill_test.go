@@ -1,7 +1,7 @@
 package flood_fill
 
 import (
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -89,7 +89,7 @@ func Test_floodFill(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := floodFill(tt.args.image, tt.args.sr, tt.args.sc, tt.args.color)
-			testsupport.AssertEqual(t, got, tt.want, "check result")
+			test.AssertEqual(t, got, tt.want, "check result")
 		})
 	}
 }

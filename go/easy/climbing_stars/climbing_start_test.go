@@ -1,7 +1,7 @@
 package climbingstars
 
 import (
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -53,7 +53,7 @@ func Test_climbStairs(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := ClimbStairs(tt.args.n)
-			testsupport.AssertEqual(t, got, tt.want, "unexpected count")
+			test.AssertEqual(t, got, tt.want, "unexpected count")
 		})
 	}
 }

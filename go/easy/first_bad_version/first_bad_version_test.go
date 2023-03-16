@@ -1,7 +1,7 @@
 package firstbadversion
 
 import (
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -49,7 +49,7 @@ func Test_firstBadVersion(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := firstBadVersion(tt.args.n, tt.args.srv)
-			testsupport.AssertEqual(t, got, tt.want, "unexpected first bad version")
+			test.AssertEqual(t, got, tt.want, "unexpected first bad version")
 		})
 	}
 }

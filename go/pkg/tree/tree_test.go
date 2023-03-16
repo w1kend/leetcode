@@ -3,7 +3,7 @@ package tree
 import (
 	"fmt"
 	"leetcode/go/pkg/sugar"
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -60,7 +60,7 @@ func TestTreeNode_ToSlice(t *testing.T) {
 			got := tt.node.ToSlice()
 
 			for i := range got {
-				testsupport.AssertEqual(t, got[i], tt.want[i], "unexpected value")
+				test.AssertEqual(t, got[i], tt.want[i], "unexpected value")
 			}
 		})
 	}
@@ -94,7 +94,7 @@ func TestFromSlice(t *testing.T) {
 					fmt.Println(*v)
 				}
 			}
-			testsupport.AssertEqual(t, got.ToSlice(), tt.want, "unexpected value")
+			test.AssertEqual(t, got.ToSlice(), tt.want, "unexpected value")
 		})
 	}
 }
@@ -150,7 +150,7 @@ func TestTreeNode_Length(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			testsupport.AssertEqual(t, tt.node.SliceLen(), tt.want, "unexpected tree length")
+			test.AssertEqual(t, tt.node.SliceLen(), tt.want, "unexpected tree length")
 		})
 	}
 }

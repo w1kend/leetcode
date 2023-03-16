@@ -1,7 +1,7 @@
 package groupanagrams
 
 import (
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"sort"
 	"testing"
 )
@@ -53,7 +53,7 @@ func Test_groupAnagrams(t *testing.T) {
 			sortMatrix(got)
 			sortMatrix(tt.want)
 
-			testsupport.AssertEqual(t, got, tt.want, "")
+			test.AssertEqual(t, got, tt.want, "")
 		})
 	}
 }

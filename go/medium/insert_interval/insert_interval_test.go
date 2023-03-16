@@ -1,7 +1,7 @@
 package insertinterval
 
 import (
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -75,7 +75,7 @@ func Test_insert(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := insert(tt.args.intervals, tt.args.newInterval)
-			testsupport.AssertEqual(t, got, tt.want, "unexpected intervals")
+			test.AssertEqual(t, got, tt.want, "unexpected intervals")
 		})
 	}
 }

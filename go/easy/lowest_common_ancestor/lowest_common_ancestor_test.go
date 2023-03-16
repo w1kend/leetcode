@@ -3,7 +3,7 @@ package lowestcommonancestor
 import (
 	"leetcode/go/pkg/sugar"
 	"leetcode/go/pkg/tree"
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -82,7 +82,7 @@ func Test_lowestCommonAncestor(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			p, q, want := tt.p(tt.tree), tt.q(tt.tree), tt.want(tt.tree)
 			got := lowestCommonAncestor2(tt.tree, p, q)
-			testsupport.AssertEqual(t, got, want, "unexpected tree")
+			test.AssertEqual(t, got, want, "unexpected tree")
 		})
 	}
 }

@@ -1,7 +1,7 @@
 package validanagram
 
 import (
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -43,7 +43,7 @@ func TestIsAnagram(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := IsAnagram(tt.args.s, tt.args.t)
-			testsupport.AssertEqual(t, got, tt.want, "check results")
+			test.AssertEqual(t, got, tt.want, "check results")
 		})
 	}
 }

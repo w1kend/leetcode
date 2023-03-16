@@ -2,7 +2,7 @@ package reverselinkedlist
 
 import (
 	"leetcode/go/pkg/list"
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -40,7 +40,7 @@ func Test_reverseList(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := reverseList(tt.args.head)
-			testsupport.AssertEqual(t, got.ToSlice(), tt.want.ToSlice(), "unexpedted list")
+			test.AssertEqual(t, got.ToSlice(), tt.want.ToSlice(), "unexpedted list")
 		})
 	}
 }

@@ -1,7 +1,7 @@
 package queueusingstacksgo
 
 import (
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -17,10 +17,10 @@ func TestStackQueue(t *testing.T) {
 
 				q.Push(1)
 				q.Push(2)
-				testsupport.AssertEqual(t, q.Peek(), 1, "unexpected value")
-				testsupport.AssertEqual(t, q.Pop(), 1, "unexpected value")
-				testsupport.AssertEqual(t, q.Empty(), false, "unexpected value")
-				testsupport.AssertEqual(t, q.Peek(), 2, "unexpected value")
+				test.AssertEqual(t, q.Peek(), 1, "unexpected value")
+				test.AssertEqual(t, q.Pop(), 1, "unexpected value")
+				test.AssertEqual(t, q.Empty(), false, "unexpected value")
+				test.AssertEqual(t, q.Peek(), 2, "unexpected value")
 			},
 		},
 		{
@@ -34,12 +34,12 @@ func TestStackQueue(t *testing.T) {
 				q.Push(2)
 				q.Push(3)
 				q.Push(4)
-				testsupport.AssertEqual(t, q.Pop(), 1, "unexpected value")
+				test.AssertEqual(t, q.Pop(), 1, "unexpected value")
 				q.Push(5)
-				testsupport.AssertEqual(t, q.Pop(), 2, "unexpected value")
-				testsupport.AssertEqual(t, q.Pop(), 3, "unexpected value")
-				testsupport.AssertEqual(t, q.Pop(), 4, "unexpected value")
-				testsupport.AssertEqual(t, q.Pop(), 5, "unexpected value")
+				test.AssertEqual(t, q.Pop(), 2, "unexpected value")
+				test.AssertEqual(t, q.Pop(), 3, "unexpected value")
+				test.AssertEqual(t, q.Pop(), 4, "unexpected value")
+				test.AssertEqual(t, q.Pop(), 5, "unexpected value")
 			},
 		},
 	}

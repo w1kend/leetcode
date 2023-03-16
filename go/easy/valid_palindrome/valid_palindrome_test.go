@@ -1,7 +1,7 @@
 package validpalindrome
 
 import (
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -39,7 +39,7 @@ func TestIsPalindrome(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := IsPalindrome(tt.args.s)
-			testsupport.AssertEqual(t, got, tt.want, "check result")
+			test.AssertEqual(t, got, tt.want, "check result")
 		})
 	}
 }

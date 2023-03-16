@@ -1,7 +1,7 @@
 package two_sum_test
 
 import (
-	"leetcode/easy/two_sum"
+	"leetcode/go/easy/two_sum"
 	"reflect"
 	"testing"
 )

@@ -3,7 +3,7 @@ package balancedbinarytree
 import (
 	"leetcode/go/pkg/sugar"
 	"leetcode/go/pkg/tree"
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -47,7 +47,7 @@ func Test_isBalanced(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := isBalanced(tt.args.root)
-			testsupport.AssertEqual(t, got, tt.want, "unexpected result")
+			test.AssertEqual(t, got, tt.want, "unexpected result")
 		})
 	}
 }

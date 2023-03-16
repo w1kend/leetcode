@@ -1,7 +1,7 @@
 package mergetwosortedlists
 
 import (
-	"leetcode/go/testsupport"
+	"leetcode/go/test"
 	"testing"
 )
 
@@ -30,13 +30,13 @@ func Test_mergeTwoLists(t *testing.T) {
 			list2 := sliceToList(tt.args.list2)
 
 			got := MergeTwoLists(&list1, &list2)
-			testsupport.AssertEqual(t, got == nil, false, "check result != nil")
+			test.AssertEqual(t, got == nil, false, "check result != nil")
 
 			gotSize := 0
 			allValues := make([]int, 0, len(tt.want))
 			for {
 				allValues = append(allValues, got.Val)
-				testsupport.AssertEqual(t, got.Val, tt.want[gotSize], "check value")
+				test.AssertEqual(t, got.Val, tt.want[gotSize], "check value")
 				gotSize++
 
 				if got.Next == nil {
@@ -45,7 +45,7 @@ func Test_mergeTwoLists(t *testing.T) {
 				got = got.Next
 			}
 			t.Log(allValues)
-			testsupport.AssertEqual(t, gotSize, len(tt.want), "check size")
+			test.AssertEqual(t, gotSize, len(tt.want), "check size")
 		})
 	}
 }
