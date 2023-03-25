@@ -1,7 +1,7 @@
 package balancedbinarytree
 
 import (
-	"leetcode/go/pkg/sugar"
+	"leetcode/go/pkg/sugar/cmpr"
 	"leetcode/go/pkg/tree"
 )
 
@@ -27,5 +27,5 @@ func isTreeBalanced(node *tree.Node) (int, bool) {
 		return 0, false
 	}
 
-	return sugar.Max(ld, rd) + 1, true
+	return cmpr.Max(ld, rd) + 1, true
 }
