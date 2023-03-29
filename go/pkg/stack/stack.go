@@ -3,36 +3,27 @@ package stack
 // TODO: add tests
 
 type Stack struct {
-	i     int
-	items []int
+	elems []int
 }
 
 func (s *Stack) Push(item int) {
-	if s.i >= len(s.items) {
-		n := make([]int, len(s.items)*2+1)
-		for i := range s.items {
-			n[i] = s.items[i]
-		}
-		s.items = n
-	}
-
-	s.items[s.i] = item
-	s.i++
+	s.elems = append(s.elems, item)
 }
 
 func (s *Stack) Pop() int {
-	s.i--
-	return s.items[s.i]
+	el := s.elems[len(s.elems)-1]
+	s.elems = s.elems[:len(s.elems)-1]
+	return el
 }
 
 func (s *Stack) IsEmpty() bool {
-	return s.i == 0
+	return len(s.elems) == 0
 }
 
 func (s *Stack) Peek() int {
-	return s.items[s.i-1]
+	return s.elems[len(s.elems)-1]
 }
 
 func (s *Stack) Size() int {
-	return s.i
+	return len(s.elems)
 }
