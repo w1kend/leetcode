@@ -20,7 +20,7 @@ func evalRPN(tokens []string) int {
 		"-": diff,
 	}
 
-	st := stack.Stack{}
+	st := stack.Stack[int]{}
 
 	for _, t := range tokens {
 		operator, ok := operators[t]

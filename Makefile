@@ -6,3 +6,6 @@ py_test_150_medium:
 
 py_test_150_hard:
 	python3 ./top_150/hard/hard_tasks_test.py
+
+t:
+	go test ./...

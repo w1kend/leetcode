@@ -5,8 +5,8 @@ import "leetcode/go/pkg/stack"
 // https://leetcode.com/problems/implement-queue-using-stacks
 // https://leetcode.com/submissions/detail/754714290
 type StackQueue struct {
-	in  stack.Stack
-	out stack.Stack
+	in  stack.Stack[int]
+	out stack.Stack[int]
 }
 
 func (sq *StackQueue) Push(item int) {
