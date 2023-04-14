@@ -15,10 +15,7 @@ func Test_lowestCommonAncestor(t *testing.T) {
 	}{
 		{
 			name: "root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8 ==> 6",
-			tree: func() *tree.Node {
-				t := tree.FromSlice([]*int{sugar.P(6), sugar.P(2), sugar.P(8), sugar.P(0), sugar.P(4), sugar.P(7), sugar.P(9), nil, nil, sugar.P(3), sugar.P(5)})
-				return &t
-			}(),
+			tree: tree.FromSlice([]*int{sugar.P(6), sugar.P(2), sugar.P(8), sugar.P(0), sugar.P(4), sugar.P(7), sugar.P(9), nil, nil, sugar.P(3), sugar.P(5)}),
 			p: func(root *tree.Node) *tree.Node {
 				return root.Left
 			},
@@ -31,10 +28,7 @@ func Test_lowestCommonAncestor(t *testing.T) {
 		},
 		{
 			name: "root = [6,2,8,0,4,7,9,null,null,3,5], p = 0, q = 8 ==> 6",
-			tree: func() *tree.Node {
-				t := tree.FromSlice([]*int{sugar.P(6), sugar.P(2), sugar.P(8), sugar.P(0), sugar.P(4), sugar.P(7), sugar.P(9), nil, nil, sugar.P(3), sugar.P(5)})
-				return &t
-			}(),
+			tree: tree.FromSlice([]*int{sugar.P(6), sugar.P(2), sugar.P(8), sugar.P(0), sugar.P(4), sugar.P(7), sugar.P(9), nil, nil, sugar.P(3), sugar.P(5)}),
 			p: func(root *tree.Node) *tree.Node {
 				return root.Left.Left
 			},
@@ -47,10 +41,7 @@ func Test_lowestCommonAncestor(t *testing.T) {
 		},
 		{
 			name: "[2,1], p = 2, q = 1; => 2",
-			tree: func() *tree.Node {
-				t := tree.FromSlice(tree.ToPointersSlice([]int{2, 1}))
-				return &t
-			}(),
+			tree: tree.FromSlice(tree.ToPointersSlice([]int{2, 1})),
 			p: func(root *tree.Node) *tree.Node {
 				return root
 			},
@@ -63,10 +54,7 @@ func Test_lowestCommonAncestor(t *testing.T) {
 		},
 		{
 			name: "root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4 ==> 2",
-			tree: func() *tree.Node {
-				t := tree.FromSlice([]*int{sugar.P(6), sugar.P(2), sugar.P(8), sugar.P(0), sugar.P(4), sugar.P(7), sugar.P(9), nil, nil, sugar.P(3), sugar.P(5)})
-				return &t
-			}(),
+			tree: tree.FromSlice([]*int{sugar.P(6), sugar.P(2), sugar.P(8), sugar.P(0), sugar.P(4), sugar.P(7), sugar.P(9), nil, nil, sugar.P(3), sugar.P(5)}),
 			p: func(root *tree.Node) *tree.Node {
 				return root.Left
 			},

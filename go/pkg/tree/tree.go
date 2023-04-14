@@ -76,9 +76,9 @@ func walkNodes(n *Node, pos int, arr *[]*int) {
 	walkNodes(n.Right, rChildPos, arr)
 }
 
-func FromSlice(s []*int) Node {
+func FromSlice(s []*int) *Node {
 	if len(s) == 0 || s[0] == nil {
-		return Node{}
+		return nil
 	}
 
 	root := Node{
@@ -87,7 +87,7 @@ func FromSlice(s []*int) Node {
 
 	fillTree(&root, s, 0)
 
-	return root
+	return &root
 }
 
 func fillTree(n *Node, s []*int, pos int) {
