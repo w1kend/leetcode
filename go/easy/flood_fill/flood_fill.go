@@ -3,7 +3,7 @@ package flood_fill
 // https://leetcode.com/problems/flood-fill
 // https://leetcode.com/submissions/detail/743656688
 
-//cell, row
+// cell, row
 type point struct {
 	c, r int
 }

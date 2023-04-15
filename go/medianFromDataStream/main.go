@@ -12,7 +12,6 @@ type MedianFinder struct {
 	Min *minHeap
 }
 
-
 /** initialize your data structure here. */
 func Constructor() MedianFinder {
 	return MedianFinder{
@@ -21,8 +20,7 @@ func Constructor() MedianFinder {
 	}
 }
 
-
-func (this *MedianFinder) AddNum(num int)  {
+func (this *MedianFinder) AddNum(num int) {
 
 	if this.Min.Len() == 0 {
 		heap.Push(this.Min, num)
@@ -46,10 +44,9 @@ func (this *MedianFinder) AddNum(num int)  {
 	}
 }
 
-
 func (this *MedianFinder) FindMedian() float64 {
 	if this.Min.Len() == this.Max.Len() {
-		return float64(this.Max.Peek() + this.Min.Peek()) / 2.0
+		return float64(this.Max.Peek()+this.Min.Peek()) / 2.0
 	}
 
 	return float64(this.Min.Peek())
@@ -59,7 +56,7 @@ func main() {
 	obj := Constructor()
 
 	start := time.Now().Nanosecond()
-	nums := []int{3,2,5,7,3,4,2,3,6,8,6,5, 5, 10, 7}
+	nums := []int{3, 2, 5, 7, 3, 4, 2, 3, 6, 8, 6, 5, 5, 10, 7}
 	for _, v := range nums {
 		obj.AddNum(v)
 	}
@@ -77,20 +74,20 @@ func main() {
 
 	fmt.Printf("time - %d\n", (end - start))
 
-
 	fmt.Println("min", obj.Min.intHeap, " ", obj.Min.Len())
 	fmt.Println("max", obj.Max.intHeap, " ", obj.Max.Len())
 	fmt.Println("========")
 	l := obj.Min.Len()
-	for i:=0; i<l; i++ {
+	for i := 0; i < l; i++ {
 		fmt.Print(heap.Pop(obj.Min), ", ")
 	}
 	fmt.Println("")
 	l = obj.Max.Len()
-	for i:=0; i<l; i++ {
+	for i := 0; i < l; i++ {
 		fmt.Print(heap.Pop(obj.Max), ", ")
 	}
 }
+
 /**
  * Your MedianFinder object will be instantiated and called as such:
  * obj := Constructor();
@@ -98,10 +95,9 @@ func main() {
  * param_2 := obj.FindMedian();
  */
 
-
 type intHeap []int
 
-func (h intHeap) Len() int { return len(h) }
+func (h intHeap) Len() int      { return len(h) }
 func (h intHeap) Swap(i, j int) { h[i], h[j] = h[j], h[i] }
 
 func (h *intHeap) Push(x interface{}) {
@@ -123,10 +119,11 @@ func (h intHeap) Peek() int {
 type minHeap struct {
 	*intHeap
 }
+
 func (h minHeap) Less(i, j int) bool { return (*h.intHeap)[i] < (*h.intHeap)[j] }
 
 type maxHeap struct {
 	*intHeap
 }
-func (h maxHeap) Less(i, j int) bool { return (*h.intHeap)[i] > (*h.intHeap)[j] }
 
+func (h maxHeap) Less(i, j int) bool { return (*h.intHeap)[i] > (*h.intHeap)[j] }

@@ -1,6 +1,6 @@
 package validparentheses
 
-//https://leetcode.com/submissions/detail/736636274/
+// https://leetcode.com/submissions/detail/736636274/
 func IsValid(s string) bool {
 	openFor := map[rune]rune{
 		'}': '{',

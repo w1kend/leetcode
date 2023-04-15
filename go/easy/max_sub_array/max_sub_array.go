@@ -8,7 +8,7 @@ import (
 // https://leetcode.com/problems/maximum-subarray
 // https://leetcode.com/submissions/detail/746662273
 
-//leetcode discussion
+// leetcode discussion
 func maxSubArray2(nums []int) int {
 	if len(nums) == 1 {
 		return nums[0]
@@ -33,7 +33,7 @@ func maxSubArray2(nums []int) int {
 	return res
 }
 
-//divide and conquer alg
+// divide and conquer alg
 func maxSubArray(nums []int) int {
 	i, j := subArr(nums)
 	return sum(nums[i : j+1]...)

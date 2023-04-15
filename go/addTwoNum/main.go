@@ -37,7 +37,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 		remainder := 0
 		if sum >= 10 {
-			quotient = quotient + sum / 10
+			quotient = quotient + sum/10
 			remainder = sum % 10
 		} else {
 			remainder = sum
@@ -75,14 +75,13 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	return resultNode
 }
 
-func getNext (node *ListNode) *ListNode {
-	if node == nil || node.Next == nil{
+func getNext(node *ListNode) *ListNode {
+	if node == nil || node.Next == nil {
 		return nil
 	}
 
 	return node.Next
 }
-
 
 /**
 Input: l1 = [2,4,3], l2 = [5,6,4]
@@ -90,8 +89,8 @@ Output: [7,0,8]
 */
 
 func main() {
-	l1 := []int{9,9,9,9,9,9,9}
-	l2 := []int{9,9,9,9}
+	l1 := []int{9, 9, 9, 9, 9, 9, 9}
+	l2 := []int{9, 9, 9, 9}
 
 	i1 := &ListNode{}
 	i2 := &ListNode{}
@@ -123,7 +122,6 @@ func main() {
 		l = l.Next
 	}
 	fmt.Println("")
-
 
 	for _, val := range l2 {
 		newNode := &ListNode{

@@ -9,3 +9,6 @@ py_test_150_hard:
 
 t:
 	go test ./...
+
+fmt:
+	goimports -w ./
