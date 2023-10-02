@@ -4,6 +4,7 @@ from typing import List
 
 # Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0
 def zero_matrix(m: List[List[int]]) -> List[List[int]]:
+    # O(NxM)
     zero_rows = dict()
     zero_cols = dict()
 
@@ -14,15 +15,20 @@ def zero_matrix(m: List[List[int]]) -> List[List[int]]:
                 zero_rows[row] = 1
 
     for row in zero_rows:
-        for i in range(len(m[row])):
-            m[row][i] = 0
+        zero_row(m, row)
 
     for row in range(len(m)):
+        # maybe the row is already zero
         if row not in zero_rows:
             for col in zero_cols:
                 m[row][col] = 0
 
     return m
+
+
+def zero_row(matrix: List[List[int]], row: int):
+    for col in range(len(matrix[row])):
+        matrix[row][col] = 0
 
 
 class Test(unittest.TestCase):
