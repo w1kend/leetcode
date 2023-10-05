@@ -4,24 +4,24 @@ from pytnon.ctci.c2 import LinkedList
 
 
 def kth_to_last_element(root: LinkedList.LinkedList, k: int) -> LinkedList.LinkedListNode:
-    left: LinkedList.LinkedListNode = root.head
+    follower: LinkedList.LinkedListNode = root.head
     dist = 2
-    right = left.next
+    leader = follower.next
 
-    if right is None:
-        return left
+    if leader is None:
+        return follower
 
-    # increase distance between two nodes
-    while right is not None and dist < k:
-        right = right.next
+    # create distance between two nodes
+    while leader is not None and dist < k:
+        leader = leader.next
         dist += 1
 
     # find the end of the list keeping K distance
-    while right.next is not None:
-        right = right.next
-        left = left.next
+    while leader.next is not None:
+        leader = leader.next
+        follower = follower.next
 
-    return left
+    return follower
 
 
 class Test(unittest.TestCase):
