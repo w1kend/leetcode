@@ -1,6 +1,6 @@
 import unittest
 
-import LinkedList
+from pytnon.ctci.c2 import LinkedList
 
 
 # Write code to remove duplicates from an unsorted linked list
