@@ -5,10 +5,6 @@ from typing import Optional
 from pytnon.ctci.c2.LinkedList import LinkedList
 
 
-# DOG = "dog"
-# CAT = "cat"
-
-
 class Animal:
     def __init__(self, id_val):
         self.created_at = time.time()
