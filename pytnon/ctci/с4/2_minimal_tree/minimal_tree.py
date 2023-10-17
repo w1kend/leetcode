@@ -7,20 +7,20 @@ from pytnon.ctci.с4.btree import BTreeNode
 def minimal_height_tree_from_array(array: List[int]) -> BTreeNode:
     root = BTreeNode(0)
 
-    def fill(node: BTreeNode, l_idx, r_idx):
-        if l_idx == r_idx:
-            node.value = array[l_idx]
+    def fill(node: BTreeNode, start, end):
+        if start == end:
+            node.value = array[start]
             return
-        mid = (l_idx + r_idx) // 2
+        mid = (start + end) // 2
         node.value = array[mid]
 
-        if l_idx <= mid - 1:
+        if start <= mid - 1:
             node.left = BTreeNode(0)
-            fill(node.left, l_idx, mid - 1)
+            fill(node.left, start, mid - 1)
 
-        if r_idx >= mid + 1:
+        if end >= mid + 1:
             node.right = BTreeNode(0)
-            fill(node.right, mid + 1, r_idx)
+            fill(node.right, mid + 1, end)
 
         return
 
