@@ -2,7 +2,7 @@ import time
 import unittest
 from typing import Optional
 
-from pytnon.ctci.c2.LinkedList import LinkedList
+from pytnon.LinkedList import LinkedList
 
 
 class Animal:

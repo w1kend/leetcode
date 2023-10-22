@@ -1,6 +1,6 @@
 import unittest
 
-from pytnon.ctci.c2.LinkedList import LinkedList
+from pytnon.LinkedList import LinkedList
 
 
 # You have two numbers represented by a linked list, where each node contains a single digit.The digits are stored in

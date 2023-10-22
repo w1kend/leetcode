@@ -1,6 +1,6 @@
 import unittest
 
-from pytnon.ctci.c2 import LinkedList
+from pytnon import LinkedList
 
 
 def kth_to_last_element(root: LinkedList.LinkedList, k: int) -> LinkedList.LinkedListNode:

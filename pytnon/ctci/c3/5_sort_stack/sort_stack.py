@@ -1,6 +1,6 @@
 import unittest
 
-from pytnon.ctci.c3.stack import Stack
+from pytnon.stack import Stack
 
 
 # Write a program to sort a stack such that the smallest items are on the top. You can use an additional temporary

@@ -1,6 +1,6 @@
 import unittest
 
-from pytnon.ctci.c3.stack import Stack
+from pytnon.stack import Stack
 
 
 class QueueStack:

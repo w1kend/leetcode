@@ -1,6 +1,6 @@
 import unittest
 
-from pytnon.ctci.c2.LinkedList import LinkedList, LinkedListNode
+from pytnon.LinkedList import LinkedList, LinkedListNode
 
 
 # Implement a function to check if a linked list is a palindrome

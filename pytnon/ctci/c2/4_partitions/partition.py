@@ -1,6 +1,6 @@
 import unittest
 
-from pytnon.ctci.c2.LinkedList import LinkedList
+from pytnon.LinkedList import LinkedList
 
 
 # Write code to partition a linked list around a value x, such that all nodes less than x come before all nodes

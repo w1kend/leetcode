@@ -3,7 +3,7 @@
 # exact same node (by reference) as the jth node of the second linked list, then they are intersecting.
 import unittest
 
-from pytnon.ctci.c2.LinkedList import LinkedList
+from pytnon.LinkedList import LinkedList
 
 
 def intersected_node(first: LinkedList, second: LinkedList):

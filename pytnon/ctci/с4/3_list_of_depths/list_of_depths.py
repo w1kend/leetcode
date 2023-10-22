@@ -4,7 +4,7 @@ import queue
 import unittest
 from typing import List
 
-from pytnon.ctci.с4.btree import BTreeNode
+from pytnon.btree import BTreeNode
 
 
 def list_of_depths(root: BTreeNode) -> List[List[int]]:

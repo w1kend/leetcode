@@ -1,7 +1,7 @@
 import unittest
 from typing import List
 
-from pytnon.ctci.с4.btree import BTreeNode
+from pytnon.btree import BTreeNode
 
 
 def minimal_height_tree_from_array(array: List[int]) -> BTreeNode:

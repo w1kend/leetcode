@@ -1,6 +1,6 @@
 import unittest
 
-from pytnon.ctci.с4.graph import Graph, Node, list_vertexes_to_adjacency_list
+from pytnon.graph import Graph, Node, list_vertexes_to_adjacency_list
 
 
 def route_between_nodes(graph: Graph, source: int, destination: int) -> bool:
