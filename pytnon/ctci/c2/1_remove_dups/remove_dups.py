@@ -3,7 +3,6 @@ import unittest
 from pytnon import LinkedList
 
 
-# Write code to remove duplicates from an unsorted linked list
 def remove_deps_hashmap(root: LinkedList.LinkedList) -> LinkedList.LinkedList:
     values = dict()
 

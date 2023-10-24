@@ -3,7 +3,6 @@ import unittest
 from pytnon.LinkedList import LinkedList, LinkedListNode
 
 
-# Implement a function to check if a linked list is a palindrome
 def is_palindrome(root: LinkedList) -> bool:
     reverted_list = revert_list(root)
     curr = reverted_list.head

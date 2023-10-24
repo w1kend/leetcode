@@ -2,7 +2,6 @@ import unittest
 from typing import List
 
 
-# Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0
 def zero_matrix(m: List[List[int]]) -> List[List[int]]:
     # O(NxM)
     zero_rows = dict()
