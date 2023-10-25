@@ -12,7 +12,7 @@ class Node:
         self.right: Optional[Node] = right
 
 
-class BinaryTree():
+class BinaryTree:
     def __init__(self, root: Optional[Node] = None):
         self.root = root
         self.__calc_params()
