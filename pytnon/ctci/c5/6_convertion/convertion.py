@@ -6,9 +6,8 @@ def flips_to_convert(a: int, b: int) -> int:
 
     cnt = 0
     while diff != 0:
-        if diff & 1 == 1:
-            cnt += 1
-        diff >>= 1
+        cnt += 1
+        diff = diff & (diff - 1)  # clear the least significant bit
     return cnt
 
 
