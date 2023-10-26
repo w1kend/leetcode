@@ -44,6 +44,8 @@ class Test(unittest.TestCase):
             (2, 2),
             (1, 2),
             (3, 3),
+            (~0, (~0).bit_length()),
+            (0, 1),
         ]
 
         for value, expected in tests:
