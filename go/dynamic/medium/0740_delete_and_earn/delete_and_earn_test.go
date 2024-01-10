@@ -1,0 +1,43 @@
+package deleteandearn
+
+import "testing"
+
+func Test_deleteAndEarn(t *testing.T) {
+	type args struct {
+		nums []int
+	}
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		{
+			name: "e1",
+			args: args{
+				nums: []int{3, 4, 2},
+			},
+			want: 6,
+		},
+		{
+			name: "e2",
+			args: args{
+				nums: []int{2, 2, 3, 3, 3, 4},
+			},
+			want: 9,
+		},
+		{
+			name: "e3",
+			args: args{
+				nums: []int{3, 1},
+			},
+			want: 4,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := deleteAndEarn(tt.args.nums); got != tt.want {
+				t.Errorf("deleteAndEarn() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
