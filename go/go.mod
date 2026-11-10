@@ -1,6 +1,6 @@
 module leetcode
 
-go 1.27
+go 1.26
 
 require github.com/samber/lo v1.38.1
 

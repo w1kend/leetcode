@@ -1,6 +1,6 @@
 package main
 
-import "leetcode/go/pkg/xmath"
+import "leetcode/pkg/xmath"
 
 type TreeNode struct {
 	Val   int
@@ -13,7 +13,6 @@ func (n *TreeNode) IsNil() bool {
 }
 
 func main() {
-
 }
 
 func insert(node *TreeNode, val int) {
@@ -39,6 +38,22 @@ func insert(node *TreeNode, val int) {
 		return
 	}
 }
+
+/*
+*      (3)
+*      /  \
+*    (2)   (5)
+*          /   \
+*         (4)  (9)
+*             /   \
+*           (7)    \
+*                   (15)
+*
+*
+*
+*
+*
+* */
 
 func balance(node *TreeNode) *TreeNode {
 	if node == nil {
